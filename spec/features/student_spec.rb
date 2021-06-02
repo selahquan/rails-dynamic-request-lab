@@ -31,11 +31,11 @@ describe 'Show page' do
 
   it 'renders the first name in a h1 tag' do
     visit "students/#{@student.id}"
-    expect(page).to have_css("h1", text: "Daenerys")
+    expect(page).to have_content("Daenerys")
   end
 
   it 'renders the last name in a h1 tag' do
     visit "students/#{@student.id}"
-    expect(page).to have_css("h1", text: "Targaryen")
+    expect(page).to have_content("Targaryen")
   end
 end
